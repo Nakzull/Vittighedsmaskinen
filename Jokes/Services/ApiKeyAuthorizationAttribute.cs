@@ -27,8 +27,6 @@ namespace Jokes.Services
 
         private bool IsApiKeyValid(HttpRequest request)
         {
-            // Replace this with your logic to validate the API key.
-            // You can retrieve the API key from the request headers or other sources.
             if (request.Headers.TryGetValue("Api-Key", out var apiKeyHeader))
             {
                 var apiKeyValue = apiKeyHeader.ToString();
