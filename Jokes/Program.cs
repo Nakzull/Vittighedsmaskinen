@@ -17,7 +17,10 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
 });
 
+
 var app = builder.Build();
+
+//app.UseMiddleware<ApiKeyAuthorizationAttribute>("2af3542e-9ac1-443b-8dfa-1a76af9ed04d");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
